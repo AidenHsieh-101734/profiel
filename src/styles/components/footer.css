@@ -1,0 +1,35 @@
+footer {
+	padding: 2em 1em 2em 1em;
+	background: #1f1f1f;
+	color: #e0e0e0;
+	text-align: center;
+}
+.social-links {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	gap: 15px;
+}
+.social-links a {
+	margin: 0 6px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	border: 1px solid #ccc;
+	transition: all 0.4s ease 0s;
+	border-radius: 42px;
+	color: white;
+	font-size: 20px;
+}
+.social-links a:hover {
+	border: 1px solid #2575fc;
+	color: #2575fc;
+}
+.glow-white {
+	filter: drop-shadow(0 0 10px #fff);
+}

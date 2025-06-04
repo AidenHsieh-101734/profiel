@@ -1,0 +1,141 @@
+header {
+	background: #1f1f1f;
+	padding: 20px 40px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	margin: 0;
+	transition: all 0.3s ease;
+}
+
+header.scrolled {
+	padding: 15px 40px;
+	background: rgba(31, 31, 31, 0.95);
+	backdrop-filter: blur(10px);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo h2 {
+	font-size: 24px;
+	color: #ffffff;
+	margin: 0;
+	transition: transform 0.3s ease;
+}
+
+.logo h2:hover {
+	transform: scale(1.05);
+}
+
+.logo h2 a {
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+}
+
+.logo h2 a::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #2575fc;
+	transition: width 0.3s ease;
+}
+
+.logo h2 a:hover::after {
+	width: 100%;
+}
+
+.internal-links {
+	display: flex;
+	gap: 20px;
+}
+
+.internal-links a {
+	color: #e0e0e0;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 15px;
+	transition: all 0.3s ease;
+	border-radius: 5px;
+	border-bottom: 4px solid transparent;
+	position: relative;
+	overflow: hidden;
+}
+
+.internal-links a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	transition: transform 0.5s ease;
+	transform: skewX(-15deg);
+	z-index: -1;
+}
+
+.internal-links a:hover::before {
+	transform: skewX(-15deg) translateX(100%);
+}
+
+.internal-links a:hover,
+.internal-links a.active {
+	color: #2575fc;
+	background: rgba(255, 255, 255, 0.1);
+	border-bottom-color: #2575fc;
+	transform: translateY(-2px);
+}
+
+.social-links {
+	display: flex;
+	gap: 15px;
+}
+
+.social-links a {
+	color: #e0e0e0;
+	font-size: 24px;
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.social-links a:hover {
+	color: #2575fc;
+	transform: translateY(-3px) scale(1.1);
+}
+
+.social-links a::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: #2575fc;
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
+}
+
+.social-links a:hover::after {
+	width: 100%;
+}
+
+@media (max-width: 720px) {
+	nav {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.internal-links {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

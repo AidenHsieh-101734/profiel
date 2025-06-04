@@ -3,48 +3,187 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/pages/index.css';
+import '../styles/animations.css';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- Hero Section -->
+			<section id="hero" class="visible">
+				<div class="hero-content">
+					<h2 class="glow-white slide-in-top">Hey, mijn naam is Aiden Hsieh</h2>
+					<p class="slide-in-bottom">Ik ben een zelfgeleerde software developer.</p>
+				</div>
+			</section>
+
+			<!-- About Me Section -->
+			<section id="about">
+				<h2 class="glow-white">Over Mij</h2>
+				<div class="about-content">
+					<p>
+						Ik ben Aiden Hsieh uit Nederland. Sinds mijn jeugd ben ik al geïnteresseerd in technologie en computers.
+						Ik ben momenteel 17 jaar oud en studeer ik nu op het Grafisch Lyceum.
+					</p>
+				</div>
+			</section>
+
+			<!-- Rest of your content -->
+			<section id="skills">
+				<h2 class="glow-white">Skills</h2>
+				<div class="card-container">
+					<div class="card">
+						<i class="fab fa-python skill-icon"></i>
+						<h3>Python</h3>
+						<p>7 jaar ervaring. Diverse tools ontwikkeld en gecertificeerd in Python.</p>
+					</div>
+					<div class="card">
+						<i class="fab fa-js skill-icon"></i>
+						<h3>JavaScript</h3>
+						<p>6+ jaar ervaring. Applicaties/tools en interactieve websites gebouwd.</p>
+					</div>
+					<div class="card">
+						<i class="fab fa-java skill-icon"></i>
+						<h3>Java</h3>
+						<p>4 jaar ervaring. Desktopapplicaties & Minecraft mods gemaakt.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-code skill-icon"></i>
+						<h3>Lua</h3>
+						<p>6 maanden ervaring. Gebruikt in game-ontwikkeling en scripting.</p>
+					</div>
+					<div class="card">
+						<i class="fab fa-php skill-icon"></i>
+						<h3>PHP</h3>
+						<p>4 jaar ervaring. Dynamische websites en backend-API's ontwikkeld.</p>
+					</div>
+					<div class="card">
+						<i class="fab fa-node-js skill-icon"></i>
+						<h3>Node.js</h3>
+						<p>6+ jaar ervaring. Server-side applicaties, Discord bots en REST-API's gebouwd.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-code skill-icon"></i>
+						<h3>C++</h3>
+						<p>5 jaar ervaring. Gewerkt aan softwares/tools en game-engines.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-code skill-icon"></i>
+						<h3>C#</h3>
+						<p>4 jaar ervaring. Desktopapplicaties en games ontwikkeld met Unreal Engine.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-code skill-icon"></i>
+						<h3>Go (Golang)</h3>
+						<p>3 jaar ervaring. Hoog-prestatie backend-services gemaakt.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-code skill-icon"></i>
+						<h3>Rust</h3>
+						<p>4 jaar ervaring. Gefocust op systeemprogrammering en geheugenveilige applicaties.</p>
+					</div>
+					<div class="card">
+						<i class="fab fa-linux skill-icon"></i>
+						<h3>Linux</h3>
+						<p>Linux systeembeheerder met uitgebreide ervaring in serverbeheer.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-server skill-icon"></i>
+						<h3>Webservers</h3>
+						<p>Meer dan 5 jaar ervaring in het beheren van meerdere drukbezochte websites.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-cloud skill-icon"></i>
+						<h3>Databases</h3>
+						<p>Ervaring met databasebeheer, inclusief installatie, configuratie en optimalisatie van SQL- en NoSQL-databases.</p>
+					</div>
+					<div class="card">
+						<i class="fas fa-cogs skill-icon"></i>
+						<h3>Sysadmin</h3>
+						<p>Expertise in systeembeheer, het waarborgen van serverstabiliteit en beveiliging.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Projects Section -->
+			<section id="projects">
+				<h2 class="glow-white">Projecten</h2>
+				<div class="card-container">
+					<div class="card">
+						<h3>Simple Todo</h3>
+						<p>Een lichte desktop-app voor het maken en beheren van een takenlijst, inclusief meldingen en deadline-tracking.</p>
+					</div>
+					<div class="card">
+						<h3>Clicker Game</h3>
+						<p>Een eenvoudige 'clicker'-game waarbij spelers punten verzamelen door te klikken. Inclusief upgrades en statistieken.</p>
+					</div>
+					<div class="card">
+						<h3>Minecraft Minimap</h3>
+						<p>Een Minecraft-mod die een minimap toevoegt aan de game, waardoor spelers hun omgeving gemakkelijker kunnen verkennen.</p>
+					</div>
+					<div class="card">
+						<h3>File Organizer</h3>
+						<p>Een desktop-tool om automatisch bestanden te organiseren op basis van hun type, zoals afbeeldingen, documenten en video's.</p>
+					</div>
+					<div class="card">
+						<h3>Snake Game</h3>
+						<p>Een klassiek Snake-spel ontwikkeld met een moderne twist. Bevat verschillende moeilijkheidsniveaus en power-ups.</p>
+					</div>
+					<div class="card">
+						<h3>Auto Clicker</h3>
+						<p>Een eenvoudige desktop-applicatie die automatisch kliks uitvoert op een interval, handig voor repetitieve taken.</p>
+					</div>
+					<div class="card">
+						<h3>Minecraft Farming Mod</h3>
+						<p>Een Minecraft-mod die nieuwe gewassen, gereedschappen en landbouwmechanismen introduceert voor een uitgebreidere landbouwervaring.</p>
+					</div>
+					<div class="card">
+						<h3>CloudDeploy</h3>
+						<p>Een tool voor het eenvoudig beheren en implementeren van webapplicaties op verschillende cloudplatforms zoals AWS, Azure, en Google Cloud.</p>
+					</div>
+					<div class="card">
+						<h3>SQL Shield</h3>
+						<p>Een beveiligingstool die ontworpen is om webapplicaties te beschermen tegen SQL-injectieaanvallen door het analyseren en filteren van verdachte query's.</p>
+					</div>
+					<div class="card">
+						<h3>Vulnerability Scanner</h3>
+						<p>Een tool die websites en servers scant op bekende beveiligingslekken en kwetsbaarheden, met aanbevelingen om deze op te lossen.</p>
+					</div>
+					<div class="card">
+						<h3>Password Manager</h3>
+						<p>Een veilige wachtwoordbeheerder waarmee gebruikers sterke, unieke wachtwoorden kunnen genereren en opslaan voor hun accounts.</p>
+					</div>
+					<div class="card">
+						<h3>Eigen privé VPN</h3>
+						<p>Een persoonlijke VPN waarmee ik veilig en privé kan surfen op het internet.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section id="contact">
+				<h2 class="glow-white">Contacten</h2>
+				<p>Neem contact met me op via Discord: <strong>ccrre</strong></p>
+			</section>
 		</main>
 		<Footer />
+		<script>
+			// Initialize animations when the page loads
+			document.addEventListener('DOMContentLoaded', () => {
+				// Make sure all sections are visible initially
+				const sections = document.querySelectorAll('section');
+				sections.forEach(section => {
+					section.classList.add('visible');
+				});
+			});
+		</script>
 	</body>
 </html>
